@@ -28,8 +28,7 @@ if st.button("Initial diagnosis and additional symptoms to investigate"):
                     "You are a medical assistant specializing in dentistry that is trying to reach a diagnosis of the dental condition before the patient visits the dentist. Based on the following inputs "
                     f"- Symptoms: {user_input_symptoms}\n"
                     f"- Medical History: {user_input_history}\n"
-                    "provide an initial diagnosis of the list of possible dental conditions. "
-                    "provide as well a list of 2-3 additional symptoms to check to reach the final diagnosis. Ensure your request for additional symptoms minimize the number of questions through a very smart process of entropy minimization."
+                    "provide an initial diagnosis of possible dental conditions and always provide as well 3 additional symptoms to investigate to reach the final diagnosis. Ensure your request for additional symptoms minimize the number of questions through a very smart process of entropy minimization."
                 )
                 response = chat([HumanMessage(content=prompt)])
                 result = response.content
@@ -55,7 +54,7 @@ if st.button("Final Diagnosis pre-visit"):
                     f"- Symptoms: {user_input_symptoms} {additional_input_symptoms}\n"
                     f"- Medical History: {user_input_history}\n"
                     "provide the most likely diagnosis of the dental condition with a probability percent number "
-                    "Provide a list of additional tests that the dentist might run once the patient comes for the visit."
+                    "Provide 3 additional tests that the dentist might run once the patient comes for the visit."
                 )
                 response = chat([HumanMessage(content=prompt)])
                 result = response.content
