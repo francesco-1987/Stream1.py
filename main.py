@@ -17,7 +17,7 @@ chat = ChatOpenAI(
     max_tokens=200
 )
 
-user_input_symptoms = st.text_input("Enter Initial list of SYMPTOMS:")
+user_input_symptoms = st.text_input("Enter SYMPTOMS:")
 user_input_history = st.text_input("Enter MEDICAL HISTORY:")
 
 if st.button("Initial diagnosis and additional symptoms to investigate"):
