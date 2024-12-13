@@ -4,6 +4,10 @@ from langchain.schema import HumanMessage
 
 openai_api_key = st.secrets["openai_api_key"]
 
+# Add an image (using a placeholder URL—replace with your actual image URL or a local file path)
+st.image("https://gpsdentalsa.com/wp-content/uploads/2023/09/preventative-dental-care.jpg", use_container_width=True)
+
+
 st.title("Dental Decision Support System")
 
 chat = ChatOpenAI(
